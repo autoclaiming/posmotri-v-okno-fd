@@ -50,12 +50,6 @@ ol {
   list-style: none;
 }
 
-.search-form__textfield:focus,
-.content__card-link:focus,
-.button:focus {
-  outline: none;
-}
-
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -105,7 +99,7 @@ ol {
 
 .search-form__checkbox-list {
   position: absolute;
-  /*Для того чтоб последний блок не съежал на уровень ниже  */
+  /*Для того чтоб последний блок не съежал на уровень ниже */
   display: flex;
   gap: 15px;
 }
@@ -122,7 +116,7 @@ ol {
 
 .result__video-container {
   position: relative;
-  width: 711px; 
+  width: 711px;
   height: 386px;
   margin-bottom: 16px;
 }
@@ -168,11 +162,6 @@ ol {
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
-}
-
-.search-form__label:has(:not(:active):focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
 }
 
 .title {
@@ -271,13 +260,11 @@ ol {
   background-color: #fff;
 }
 
-.search-form__checkbox[type="checkbox"]:checked
-  + .search-form__pseudo-checkbox::after {
+.search-form__checkbox[type="checkbox"]:checked+.search-form__pseudo-checkbox::after {
   opacity: 1;
 }
 
-.search-form__checkbox[type="checkbox"]:checked:active
-  + .search-form__pseudo-checkbox::after {
+.search-form__checkbox[type="checkbox"]:checked:active+.search-form__pseudo-checkbox::after {
   content: "";
   display: block;
   width: 15px;
@@ -286,24 +273,23 @@ ol {
   background-color: #fff;
 }
 
-.search-form__label-text:hover {
+.search-form__label-text:hover { 
   text-decoration: underline;
   text-underline-offset: 2px;
   cursor: pointer;
 }
 
-.content__card-link:hover,
+.content__card-link:hover .content__video-card-title,
+.content__card-link:hover .content__video-card-description,
 .button:hover {
   text-decoration: underline;
+  text-underline-offset: 2px;
   cursor: pointer;
 }
 
-.content__card-link:focus-visible .content__video-card {
-  outline: 1px solid #fff;
-}
-
-.search-form__label:focus-visible,
-.button:focus-visible {
+.search-form__label:has(:focus-visible),
+.button:focus-visible,
+.content__card-link:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
