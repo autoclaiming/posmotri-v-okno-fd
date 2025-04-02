@@ -86,13 +86,16 @@ ol {
   grid-area: content__details;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
 }
 
 .content__list-container {
   position: relative;
   height: 298px;
-  margin-top: 26px;
   overflow: auto;
+  margin-top: 10px;
 }
 
 .search-form {
@@ -104,10 +107,9 @@ ol {
 }
 
 .search-form__checkbox-list {
-  position: absolute;
-  /*Для того чтоб последний блок не съежал на уровень ниже  */
   display: flex;
   gap: 15px;
+  justify-content: end;
 }
 
 .search-form__fieldset {
@@ -135,6 +137,8 @@ ol {
 }
 
 .content__list {
+  padding-right: 3px;
+  padding-left: 3px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -143,10 +147,11 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  max-width: 100%;
 }
 
 .content__video-card-thumbnail {
-  min-width: 194px;
+  max-width: 194px;
   height: 103px;
   object-fit: cover;
   object-position: center;
@@ -181,19 +186,14 @@ ol {
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
-  margin-bottom: 26px;
 }
 
 .content__accent {
   color: #545050;
-  font-family: "Oswald", sans-serif;
-}
-
-.content__list-item {
-  padding: 0px 1px 2px 3px;
 }
 
 .content__card-link {
+  display: block;
   color: #fff;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
@@ -222,7 +222,7 @@ ol {
 
 .content__video-card-title {
   max-width: 196px;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -296,7 +296,7 @@ ol {
   background-color: #fff;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-underline-offset: 2px;
   cursor: pointer;
@@ -336,6 +336,7 @@ ol {
 }
 
 .more-button {
+  margin-top: 30px;
   width: calc(100% - 4px);
   margin-bottom: 3px;
 }
